@@ -1,0 +1,130 @@
+.single-card {
+    position: relative;
+    border: 1px solid transparent;
+    width: 336px;
+    height: 360px;
+    padding: 25px;
+    background-color: $card-background;
+    border: 1px solid rgba(143, 154, 157, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    z-index: 1;
+    overflow: hidden;
+    transition: all ease-in-out .1s;
+    &.live-event {
+        cursor: pointer;
+    }
+    &:hover {
+        border-color: $base-red-color;
+    }
+    &__star {
+        position: absolute;
+        top: 0;
+        right: -1px;
+        z-index: -1;
+        &--finished {
+            top: -10px;
+            right: -15px;
+        }
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        p {
+            color: $text-sub;
+        }
+        &__live {
+            text-align: right;
+            img {
+                width: 35px;
+                height: 35px;
+            }
+            p {
+                margin-top: 5px;
+                color: $text-white;
+            }
+        }
+        &__upcoming {
+            text-align: right;
+        }
+    }
+    &__content {
+        
+        text-align: left;
+        &__images {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 15px;
+        }
+        &__teams {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        &__battles {
+            display: grid;
+            grid-template-columns: 8fr 6fr;
+            align-items: center;
+            &__match {
+                text-align: center;
+                padding: 10px 15px;
+                color: $text-dark;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                background: $match-background;
+                border-radius: 4px;
+                font-size: 14px;
+                font-weight: 700;
+            }
+        } 
+        &__team {
+            display: grid;
+            grid-template-columns: 11fr 1fr;
+            align-items: center;
+            &__coefficient {
+                min-width: 55px;
+                height: 20px;
+                line-height: 5px;
+                text-align: center;
+                padding: 5px 0;
+                font-size: 12px;
+                background-color: $light-background;
+                border: 1px solid rgba(151, 151, 151, 0.1);
+                box-sizing: border-box;
+            }
+            &__result {
+                font-size: 24px;
+                line-height: 35px;
+                font-weight: 700;
+                color: $text-sub;
+            }
+            .winner {
+                color: $text-dark;
+            }
+        } 
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        &--battle {
+            justify-content: left;
+            gap: 10px;
+        }
+        p {
+            color: $text-sub;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}

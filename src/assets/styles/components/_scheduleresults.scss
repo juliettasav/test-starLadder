@@ -1,0 +1,29 @@
+.schedule-result-block {
+    padding-top: 90px;
+    h3 {
+        margin-bottom: 40px;
+    }
+    &__buttons {
+        border-top: 2px solid $base-red-color;
+        margin-bottom: 60px;
+        .btn {
+            font-size: 18px;
+            padding: 15px 40px;
+            color: $text-dark;
+            font-weight: 700;
+            line-height: 30px;
+            background-color: transparent;
+            border: none;
+            &--choosed {
+                background-color: $base-red-color;
+                color: $text-white;
+            }
+        }
+        
+    }
+    &__cards {
+        display: flex;
+        text-align: center;
+        gap: 35px;
+    }
+}

@@ -1,0 +1,23 @@
+.navigation {
+    ul {
+        a {
+            text-decoration: none;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: $text-sub;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 20px 0;
+                border-top: 1px solid rgba(54, 56, 65, 0.1);
+                img {
+                    margin-right: 5px;
+                }
+            }
+            &:last-child li{
+                border-bottom: 1px solid rgba(54, 56, 65, 0.1);
+            }
+        }
+    }
+}

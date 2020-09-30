@@ -1,0 +1,56 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: $light-background;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 74.89%; // 1438px = 74.89% on 1920px
+    height: 100%;
+    &--header {
+        max-width: 93.75%; // 1800px = 93.75% on 1920px
+    }
+}
+
+h1 {
+    color: $text-white;
+    font-size: 60px;
+    line-height: 69px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    color: $text-dark;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+h5 {
+    color: $text-dark;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.maint-text {
+    font-size: 18px;
+    letter-spacing: 1%;
+    line-height: 30px;
+}
+
+.sub-text {
+    font-size: 16px;
+}
+
+.small-text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.btn {
+    cursor: pointer;
+}
+

@@ -1,0 +1,11 @@
+@mixin btn-full {
+    background-color: $base-red-color;
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+@mixin btn-clear {
+    border: 1px solid $base-red-color;
+    border-radius: 2px;
+    background-color: transparent;
+}

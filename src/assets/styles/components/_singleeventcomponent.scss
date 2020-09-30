@@ -1,0 +1,71 @@
+.single-event-block {
+    background-image: url('../../images/pic/background-img.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    &__content {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 318px;
+        align-items: flex-end;
+        color: $text-light;
+        
+        &__left {
+            padding-bottom: 125px;
+            h1 {
+                margin: 50px 0;
+            }
+            p {
+                position: relative;
+                padding-left: 42px;
+                border-left: 2px solid $base-red-color;
+            }
+            &__buttons {
+                margin-top: 87px;
+                display: flex;
+                gap: 35px;
+                .btn {
+                    width: 317px;
+                    color: $text-white;
+                    font-size: 14px;
+                    letter-spacing: 1.5px;
+                    padding: 20px 26px;
+                    text-transform: uppercase;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    transition: all ease-in-out .2s;
+                    &--full {
+                        @include btn-full;
+                    }
+                    &--clear {
+                        @include btn-clear;
+                        &:hover {
+                            background-color: $base-red-color;
+                        }
+                    }
+                }
+            }
+        }
+        &__right {
+            margin-bottom: 125px;
+            &__details {
+                display: grid;
+                grid-template-columns: 1fr 11fr;
+                column-gap: 40px;
+                row-gap: 20px;
+                .item-text {
+                    font-weight: 700;
+                }
+            }
+            &__media {
+                display: flex;
+                align-items: center;
+                gap: 40.95px;
+                margin-top: 108px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
