@@ -17,27 +17,25 @@ export default function StagesComponent() {
                 <p className="maint-text stages-event__text-register">Зарегистрировано: 24</p>
                 <div className="stages-event__content">
                     <div className="stages-event__content__table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Команда</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {registredPlayers.map(player => {
-                                    return (
-                                        <tr key={uuid()}>
-                                            <td data-column="#">{player.id}</td>
-                                            <td data-column="Команда">
+                        <div className="stages-event__content__table__header">
+                            <div className="stages-event__content__table__header__item">#</div>
+                            <div className="stages-event__content__table__header__item">Команда</div>
+                        </div>
+                        <div className="stages-event__content__table__body">
+                            {registredPlayers.map(player => {
+                                return (
+                                    <div className="stages-event__content__table__body__row" key={uuid()}>
+                                        
+                                            <div className="stages-event__content__table__body__item" data-column="#">{player.id}</div>
+                                            <div className="stages-event__content__table__body__item" data-column="Команда">
                                                 <img src={player.img} alt="Team Flag"/>
                                                 {player.name}
-                                            </td>
-                                        </tr>
-                                    )
-                                })}
-                            </tbody>
-                        </table>
+                                            </div>
+                                        
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                     <div className="stages-event__content__registration">
                         <div className="stages-event__content__registration__box">

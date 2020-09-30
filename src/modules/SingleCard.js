@@ -19,7 +19,12 @@ export default function SingleCard(props) {
     const goToUrl = (e) => {
         e.preventDefault();
         if (e.currentTarget.classList.contains('live-event')) {
-            window.location.href='/live-event';
+            if (props.currentContent === 'matches') {
+                window.location.href='/live-event-match';
+            } else {
+                window.location.href='/live-event-battle';
+            }
+            
         }
     }
     
