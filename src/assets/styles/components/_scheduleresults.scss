@@ -18,6 +18,9 @@
                 background-color: $base-red-color;
                 color: $text-white;
             }
+            @media (max-width: 325px) {
+                font-size: 16px;
+            }
         }
         
     }
@@ -34,5 +37,8 @@
             justify-items: center;
             row-gap: 50px;
         }
+        @media (max-width: $phone-normal) {
+            grid-template-columns: 1fr; 
+        } 
     }
 }

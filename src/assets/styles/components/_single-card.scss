@@ -12,9 +12,17 @@
     z-index: 1;
     overflow: hidden;
     transition: all ease-in-out .1s;
+    @media (max-width: $desktop-small) {
+        padding: 15px;
+    }
     @media (max-width: $tablet-small) {
         width: 280px;
     }
+    @media (max-width: $phone-normal) {
+        width: 100%;
+        height: 225px;
+        padding: 15px;
+    } 
     &.live-event {
         cursor: pointer;
     }
@@ -33,6 +41,9 @@
         @media (max-width: $desktop-small) {
             width: 59%;
         }
+        @media (max-width: $phone-normal) {
+            width: 45%;
+        }
         img {
             width: 100%;
             
@@ -44,23 +55,45 @@
         justify-content: space-between;
         height: 100%;
         width: 100%;
+        @media (max-width: $phone-normal) {
+            // flex-direction: row;
+            justify-content: flex-start;
+            gap: 0;
+
+        }
     }
     &__header {
         display: flex;
         justify-content: space-between;
         z-index: 1;
+        @media (max-width: $phone-normal) {
+            max-height: 60px;
+        }
         p {
             color: $text-sub;
         }
         &__live {
             text-align: right;
+            @media (max-width: $phone-normal) {
+                width: 45px;
+                text-align: center;
+            }
             img {
                 width: 35px;
                 height: 35px;
+                @media (max-width: $phone-normal) {
+                    width: 25px;
+                    height: 25px;
+                }
             }
             p {
                 margin-top: 5px;
                 color: $text-white;
+                @media (max-width: $phone-normal) {
+                    font-size: 12px;
+                    line-height: 15px;
+                    font-weight: 700;
+                }
             }
         }
         &__upcoming {
@@ -74,6 +107,14 @@
             display: flex;
             margin-bottom: 10px;
             gap: 15px;
+            width: 40px;
+            @media (max-width: $phone-normal) {
+                margin-bottom: 5px;
+                gap: 12px
+            }
+            img {
+                width: 100%;
+            }
         }
         &__teams {
             display: grid;
@@ -85,12 +126,9 @@
         }
         &__battles {
             display: grid;
-            grid-template-columns: 8fr 6fr;
+            grid-template-columns: 8fr auto;
             align-items: center;
-            @media (max-width: $desktop-normal) {
-                grid-template-columns: 8fr 7fr;
-
-            }
+            
             &__match {
                 text-align: center;
                 padding: 10px 15px;
@@ -101,6 +139,10 @@
                 border-radius: 4px;
                 font-size: 14px;
                 font-weight: 700;
+                @media (max-width: $desktop-small) {
+                    color: $text-sub;
+                    font-size: 12px;
+                }
             }
         } 
         &__team {
@@ -117,7 +159,11 @@
                 background-color: $light-background;
                 border: 1px solid rgba(151, 151, 151, 0.1);
                 box-sizing: border-box;
+                @media (max-width: $phone-normal) {
+                    font-weight: 700;
+                }
             }
+            
             &__result {
                 font-size: 24px;
                 line-height: 35px;
@@ -127,6 +173,9 @@
             .winner {
                 color: $text-dark;
             }
+            .not-winner {
+                color: $text-sub;
+            }
         } 
     }
     &__footer {
@@ -134,6 +183,9 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 15px;
+        @media (max-width: $phone-normal) {
+            margin-top: 5px;
+        }
         &--battle {
             justify-content: left;
             gap: 10px;

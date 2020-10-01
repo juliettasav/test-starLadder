@@ -49,7 +49,6 @@ export default function StagesComponent() {
                             <div className="stages-event__content__registration__box__img">
                                 <img src={iconRegistration} alt="Icon Registration"/>
                             </div>
-                                
                             <div className="stages-event__content__registration__box__content active">
                                 <p className="sub-text registration-title">Registration</p>
                                 <p className="sub-text">29 sep, 19:00 – 20 nov, 10:00</p>

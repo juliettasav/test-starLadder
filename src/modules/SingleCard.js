@@ -76,7 +76,7 @@ export default function SingleCard(props) {
                                                         {el.teams.map(team => {
                                                             return (
                                                                 <div className="single-card__content__team">
-                                                                    <h5 key={uuid()}>{team.name}</h5>
+                                                                    <h5 className={el.finished && !team.winner ? 'not-winner' : ''} key={uuid()}>{team.name}</h5>
                                                                     <p key={uuid()} 
                                                                     className={
                                                                         (el.live || el.upcoming ? 'single-card__content__team__coefficient ' : 'single-card__content__team__result ')

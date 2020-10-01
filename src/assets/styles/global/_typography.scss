@@ -1,0 +1,59 @@
+h1 {
+    color: $text-white;
+    font-size: 60px;
+    line-height: 69px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    @media (max-width: $tablet-big) {
+        font-size: 48px;
+    }
+    @media (max-width: $tablet-small) {
+        font-size: 32px;
+        line-height: 41px;
+    }
+}
+
+h3 {
+    color: $text-dark;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+h5 {
+    color: $text-dark;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    @media (max-width: $desktop-small) {
+        font-size: 18px;
+    }
+    @media (max-width: $tablet-big) {
+        font-size: 24px;
+    }
+}
+
+.main-text {
+    font-size: 18px;
+    letter-spacing: 1%;
+    line-height: 30px;
+    @media (max-width: $tablet-big) {
+        font-size: 14px;
+    }
+    @media (max-width: $tablet-small) {
+         font-size: 12px;  
+         line-height: 24px; 
+    }
+}
+
+.sub-text {
+    font-size: 16px;
+    @media (max-width: $tablet-small) {
+        font-size: 12px;
+    }
+}
+
+.small-text {
+    font-size: 14px;
+    line-height: 20px;
+}

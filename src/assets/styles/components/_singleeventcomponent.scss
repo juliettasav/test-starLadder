@@ -19,21 +19,29 @@
         @media (max-width: $tablet-big) {
             grid-template-columns: 3fr 2fr;
             gap: 70px;
-
         }
         @media (max-width: $tablet-small) {
             gap: 8px;
         }
-        
+        @media (max-width: $phone-normal) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr; 
+        }        
         &__left {
             padding-bottom: 125px;
             @media (max-width: $desktop-small) {
                 padding-bottom: 50px; 
             }
+            @media (max-width: $phone-normal) {
+                padding-bottom: 25px;
+            }
             h1 {
                 margin: 50px 0;
                 @media (max-width: $tablet-big) {
                     margin: 25px 0;
+                }
+                @media (max-width: $phone-normal) {
+                    margin: 10px 0;
                 }
             }
             p {
@@ -51,6 +59,9 @@
                 @media (max-width: $tablet-big) {
                     margin-top: 43px;
                     gap: 20px;
+                }
+                @media (max-width: $phone-normal) {
+                    margin-top: 25px;
                 }
                 .btn {
                     width: 317px;
@@ -74,6 +85,11 @@
                         text-align: left;
                         padding: 5px 10px;
                     }
+                    @media (max-width: 325px) {
+                        width: 130px;
+                        padding: 2px 5px;
+                    }
+                    
                     img {
                         @media (max-width: $tablet-big) {
                             width: 18px;
@@ -81,6 +97,9 @@
                         @media (max-width: $tablet-small) {
                             width: 15px;
 
+                        }
+                        @media (max-width: 325px) {
+                            width: 10px;
                         }
                     }
                     &--full {
@@ -100,6 +119,9 @@
             @media (max-width: $desktop-small) {
                 padding-bottom: 50px; 
             }
+            @media (max-width: $phone-normal) {
+                padding-bottom: 20px; 
+            } 
             &__details {
                 display: grid;
                 grid-template-columns: 1fr 11fr;
@@ -123,6 +145,9 @@
                 }
                 @media (max-width: $tablet-small) {
                     gap: 20px;
+                }
+                @media (max-width: $phone-normal) {
+                    margin: 25px 0 10px;
                 }
             }
         }
