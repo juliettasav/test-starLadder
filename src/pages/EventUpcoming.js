@@ -1,5 +1,4 @@
 import React from 'react';
-// import uuid from 'react-uuid'
 
 import Header from '../layout/Header';
 import SingleEventComponent from '../components/SingleEventComponent';

@@ -58,78 +58,78 @@ export default function SingleCard(props) {
                                 </div>
                                 <div className="box">
                                     <div className="single-card__content">
-                                            <div className="single-card__content__images">
-                                                {
-                                                props.currentContent === 'matches' ?
-                                                    el.teams.map(team => {
-                                                        return (
-                                                            <img src={team.img} key={uuid()} alt="Team Logo"/>
-                                                        )
-                                                    })
-                                                :
-                                                    <img src={el.imgBattle} key={uuid()} alt="Battle Logo"/>
-                                                }
-                                                
-                                            </div>
-                                            {props.currentContent === 'matches' ?
-                                                    <div className="single-card__content__teams">
-                                                        {el.teams.map(team => {
-                                                            return (
-                                                                <div className="single-card__content__team">
-                                                                    <h5 className={el.finished && !team.winner ? 'not-winner' : ''} key={uuid()}>{team.name}</h5>
-                                                                    <p key={uuid()} 
-                                                                    className={
-                                                                        (el.live || el.upcoming ? 'single-card__content__team__coefficient ' : 'single-card__content__team__result ')
-                                                                        + (team.winner ? 'winner' : '')
-                                                                    }
-                                                                >
-                                                                    {
-                                                                    el.live || el.upcoming 
-                                                                    ?
-                                                                    team.coefficient
-                                                                    :
-                                                                    team.result
-                                                                    }
-                                                                    </p>
-                                                                </div>
-                                                            )
-                                                        })}
-                                                    </div>
-                                                    :
-                                                    <div className="single-card__content__battles">
-                                                        <div>
-                                                            {el.teams.map(team => {
-                                                                return (
-                                                                    <h5 key={uuid()}>{team.name}</h5>
-                                                                )
-                                                            })}
+                                        <div className="single-card__content__images">
+                                            {
+                                            props.currentContent === 'matches' 
+                                            ?
+                                                el.teams.map(team => {
+                                                    return (
+                                                        <img src={team.img} key={uuid()} alt="Team Logo"/>
+                                                    )
+                                                })
+                                            :
+                                                <img src={el.imgBattle} key={uuid()} alt="Battle Logo"/>
+                                            }
+                                        </div>
+                                        {props.currentContent === 'matches' 
+                                            ?
+                                            <div className="single-card__content__teams">
+                                                {el.teams.map(team => {
+                                                    return (
+                                                        <div className="single-card__content__team">
+                                                            <h5 className={el.finished && !team.winner ? 'not-winner' : ''} key={uuid()}>{team.name}</h5>
+                                                            <p key={uuid()} 
+                                                            className={
+                                                                (el.live || el.upcoming ? 'single-card__content__team__coefficient ' : 'single-card__content__team__result ')
+                                                                + (team.winner ? 'winner' : '')
+                                                            }
+                                                        >
+                                                            {
+                                                            el.live || el.upcoming 
+                                                            ?
+                                                            team.coefficient
+                                                            :
+                                                            team.result
+                                                            }
+                                                            </p>
                                                         </div>
-                                                        <div className="single-card__content__battles__match">Match #{el.matchId}</div>
-                                                    </div>
-                                                }
+                                                    )
+                                                })}
+                                            </div>
+                                            :
+                                            <div className="single-card__content__battles">
+                                                <div>
+                                                    {el.teams.map(team => (<h5 key={uuid()}>{team.name}</h5>))}
+                                                </div>
+                                                <div className="single-card__content__battles__match">
+                                                    Match #{el.matchId}
+                                                </div>
+                                            </div>
+                                            }
                                                 
                                     </div>
                                     <div 
                                         className={"single-card__footer " + 
                                         (props.currentContent === "battles" ? "single-card__footer--battle" : "")}
                                     >
-                                        {props.currentContent === "battles" && el.finished ?
-                                        <img src={iconWinner} alt="Icon Winner"/>
-                                        : ''
+                                        {props.currentContent === "battles" && el.finished 
+                                            ?
+                                                <img src={iconWinner} alt="Icon Winner"/>
+                                            : 
+                                                ''
                                         }
                                         <p>
-                                            {el.finished ? el.scores 
-                                            : el.upcoming ? `${el.beforeStart} • ${el.system}` 
-                                            : el.system
+                                            {el.finished 
+                                                ? el.scores 
+                                                : el.upcoming 
+                                                ? `${el.beforeStart} • ${el.system}` 
+                                                : el.system
                                             }
                                         </p>
                                         {props.currentContent === 'matches'
-                                        ?
-                                            <img src={el.partnerImg} alt="Partner Logo"/>
-                                        :
-                                        ''
+                                            ? <img src={el.partnerImg} alt="Partner Logo"/>
+                                            : ''
                                         }
-                                        
                                     </div>
                                 </div>
                             </div>       

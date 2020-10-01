@@ -10,7 +10,6 @@ import Navigation from '../modules/Navigation'
 
 export default function StagesComponent() {
     const goToTeamLink = (e) => {
-
         window.open(
             e.currentTarget.getAttribute('data-url'),
             '_blank'
@@ -32,13 +31,11 @@ export default function StagesComponent() {
                             {registredPlayers.map(player => {
                                 return (
                                     <div className="stages-event__content__table__body__row" data-url={player.url} key={uuid()} onClick={goToTeamLink}>
-                                        
-                                            <div className="stages-event__content__table__body__item" data-column="#">{player.id}</div>
-                                            <div className="stages-event__content__table__body__item" data-column="Команда">
-                                                <img src={player.img} alt="Team Flag"/>
-                                                {player.name}
-                                            </div>
-                                        
+                                        <div className="stages-event__content__table__body__item" data-column="#">{player.id}</div>
+                                        <div className="stages-event__content__table__body__item" data-column="Команда">
+                                            <img src={player.img} alt="Team Flag"/>
+                                            {player.name}
+                                        </div>
                                     </div>
                                 )
                             })}
@@ -55,18 +52,18 @@ export default function StagesComponent() {
                             </div>
                         </div>
                         <div className="stages-event__content__registration__box">
-                                <img src={iconCheckin} alt="Icon Registration" />
-                                <div className="stages-event__content__registration__box__content">
-                                    <p className="sub-text registration-title">Check-in</p>
-                                    <p className="sub-text">29 sep, 19:00 – 20 nov, 10:00</p>
-                                </div>
+                            <img src={iconCheckin} alt="Icon Registration" />
+                            <div className="stages-event__content__registration__box__content">
+                                <p className="sub-text registration-title">Check-in</p>
+                                <p className="sub-text">29 sep, 19:00 – 20 nov, 10:00</p>
+                            </div>
                         </div>
                         <div className="stages-event__content__registration__box">
-                                <img src={iconScheduling} alt="Icon Registration"/>
-                                <div className="stages-event__content__registration__box__content">
-                                    <p className="sub-text registration-title">Scheduling:</p>
-                                    <p className="sub-text">29 sep, 19:00 – 20 nov, 10:00</p>
-                                </div>
+                            <img src={iconScheduling} alt="Icon Registration"/>
+                            <div className="stages-event__content__registration__box__content">
+                                <p className="sub-text registration-title">Scheduling:</p>
+                                <p className="sub-text">29 sep, 19:00 – 20 nov, 10:00</p>
+                            </div>
                         </div>
                         <div 
                             className="stages-event__content__registration__box stages-event__content__registration__box--status"

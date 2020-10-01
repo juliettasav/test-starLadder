@@ -49,10 +49,10 @@ export default function SingleEventComponent() {
                             <div className="main-text item-text">$1,000,000</div>
                         </div>
                         <div className="single-event-block__content__right__media">
-                            <a href="https://twitter.com" target="_blank"><img src={iconTwitter} alt="Icon Twitter"/></a>
-                            <a href="https://twitch.com" target="_blank"><img src={iconTwitch} alt="Icon Twitch"/></a>
-                            <a href="https://facebook.com" target="_blank"><img src={iconFacebook} alt="Icon Facebook"/></a>
-                            <a href="https://vk.com" target="_blank"><img src={iconVk} alt="Icon VK"/></a>
+                            <a href="https://twitter.com" rel="noopener noreferrer" target="_blank"><img src={iconTwitter} alt="Icon Twitter"/></a>
+                            <a href="https://twitch.com" rel="noopener noreferrer" target="_blank"><img src={iconTwitch} alt="Icon Twitch"/></a>
+                            <a href="https://facebook.com" rel="noopener noreferrer" target="_blank"><img src={iconFacebook} alt="Icon Facebook"/></a>
+                            <a href="https://vk.com" rel="noopener noreferrer" target="_blank"><img src={iconVk} alt="Icon VK"/></a>
                         </div>
                     </div>
                 </div>
