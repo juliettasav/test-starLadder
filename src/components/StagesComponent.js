@@ -20,8 +20,8 @@ export default function StagesComponent() {
         <div className="stages-event">
             <div className="container">
                 <h3>Этапы проведения</h3>
-                <p className="maint-text stages-event__sub-title">The path to every Major begins with the open qualifiers for the regional Minor Championships, spanning Europe, CIS, Americas, and Asia. <span className="red-text">Here is</span> the schedule of every qualifying stage of StarLadder Major.</p>
-                <p className="maint-text stages-event__text-register">Зарегистрировано: 24</p>
+                <p className="main-text stages-event__sub-title">The path to every Major begins with the open qualifiers for the regional Minor Championships, spanning Europe, CIS, Americas, and Asia. <span className="red-text">Here is</span> the schedule of every qualifying stage of StarLadder Major.</p>
+                <p className="main-text stages-event__text-register">Зарегистрировано: 24</p>
                 <div className="stages-event__content">
                     <div className="stages-event__content__table">
                         <div className="stages-event__content__table__header">

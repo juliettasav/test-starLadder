@@ -12,6 +12,9 @@
     z-index: 1;
     overflow: hidden;
     transition: all ease-in-out .1s;
+    @media (max-width: $tablet-small) {
+        width: 280px;
+    }
     &.live-event {
         cursor: pointer;
     }
@@ -26,6 +29,13 @@
         &--finished {
             top: -10px;
             right: -15px;
+        }
+        @media (max-width: $desktop-small) {
+            width: 59%;
+        }
+        img {
+            width: 100%;
+            
         }
     }
     .wrapper {
@@ -69,11 +79,18 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 15px;
+            @media (max-width: $desktop-small) {
+                gap: 0;
+            }
         }
         &__battles {
             display: grid;
             grid-template-columns: 8fr 6fr;
             align-items: center;
+            @media (max-width: $desktop-normal) {
+                grid-template-columns: 8fr 7fr;
+
+            }
             &__match {
                 text-align: center;
                 padding: 10px 15px;

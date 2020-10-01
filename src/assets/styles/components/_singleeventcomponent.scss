@@ -10,21 +10,48 @@
         gap: 318px;
         align-items: flex-end;
         color: $text-light;
+        @media (max-width: $desktop-normal) {
+            gap: 200px;
+        }
+        @media (max-width: $desktop-small) {
+            gap: 100px;
+        }
+        @media (max-width: $tablet-big) {
+            grid-template-columns: 3fr 2fr;
+            gap: 70px;
+
+        }
+        @media (max-width: $tablet-small) {
+            gap: 8px;
+        }
         
         &__left {
             padding-bottom: 125px;
+            @media (max-width: $desktop-small) {
+                padding-bottom: 50px; 
+            }
             h1 {
                 margin: 50px 0;
+                @media (max-width: $tablet-big) {
+                    margin: 25px 0;
+                }
             }
             p {
                 position: relative;
                 padding-left: 42px;
                 border-left: 2px solid $base-red-color;
+                @media (max-width: $tablet-big) {
+                    padding-left: 21px;
+                }
             }
             &__buttons {
                 margin-top: 87px;
                 display: flex;
                 gap: 35px;
+                @media (max-width: $tablet-big) {
+                    margin-top: 43px;
+                    gap: 20px;
+                }
                 .btn {
                     width: 317px;
                     color: $text-white;
@@ -36,6 +63,26 @@
                     justify-content: space-between;
                     align-items: center;
                     transition: all ease-in-out .2s;
+                    @media (max-width: $tablet-big) {
+                        width: 225px;
+                        padding: 10px 15px;
+                        font-size: 12px;
+                    }
+                    @media (max-width: $tablet-small) {
+                        width: 150px;
+                        font-size: 10px;
+                        text-align: left;
+                        padding: 5px 10px;
+                    }
+                    img {
+                        @media (max-width: $tablet-big) {
+                            width: 18px;
+                        }
+                        @media (max-width: $tablet-small) {
+                            width: 15px;
+
+                        }
+                    }
                     &--full {
                         @include btn-full;
                     }
@@ -49,7 +96,10 @@
             }
         }
         &__right {
-            margin-bottom: 125px;
+            padding-bottom: 125px;
+            @media (max-width: $desktop-small) {
+                padding-bottom: 50px; 
+            }
             &__details {
                 display: grid;
                 grid-template-columns: 1fr 11fr;
@@ -58,13 +108,22 @@
                 .item-text {
                     font-weight: 700;
                 }
+                @media (max-width: $tablet-big) {
+                    column-gap: 20px;
+                    row-gap: 10px;
+                }
             }
             &__media {
                 display: flex;
                 align-items: center;
                 gap: 40.95px;
-                margin-top: 108px;
-                margin-bottom: 20px;
+                margin: 108px 0 20px;
+                @media (max-width: $tablet-big) {
+                    margin: 60px 0 10px;
+                }
+                @media (max-width: $tablet-small) {
+                    gap: 20px;
+                }
             }
         }
     }

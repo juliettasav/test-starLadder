@@ -76,11 +76,6 @@
                         vertical-align: middle;
                     }
                 }
-
-                
-                
-                    
-
                 
             }
         }
@@ -96,15 +91,35 @@
                     background: #20A95A;
                     border-radius: 2px;
                     gap: 68px;
-                    
                     position: relative;
+                    @media (max-width: $desktop-small) {
+                        gap: 50px;
+
+                    }
+                    @media (max-width: $tablet-big) {
+                        gap: 10px;
+                    }
                     p {
                         color: $text-white;
+                        @media (max-width: $tablet-big) {
+                            font-size: 12px;
+                            line-height: 15px;
+                        }
                     }
                     .status-background {
                         position: absolute;
                         top: 0;
                         left: 0;
+                        width: 100%;
+                    }
+
+                    img {
+                        // @media (max-width: $desktop-small) {
+                        //     width: ;
+                        // }
+                        @media (max-width: $tablet-big) {
+                            width: 20px;
+                        }
                     }
                 }
                 &__img {
@@ -123,6 +138,7 @@
                         transform: translateX(-50%); 
                         z-index: -1;      
                     }
+                    
                 }
                 
                 &__content {

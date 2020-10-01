@@ -25,5 +25,14 @@
         display: flex;
         text-align: center;
         gap: 35px;
+        @media (max-width: $desktop-small) {
+            gap: 10px;
+        }
+        @media (max-width: $tablet-big) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            row-gap: 50px;
+        }
     }
 }
