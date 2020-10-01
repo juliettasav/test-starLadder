@@ -19,12 +19,10 @@ export default function SingleCard(props) {
     const goToUrl = (e) => {
         e.preventDefault();
         if (e.currentTarget.classList.contains('live-event')) {
-            if (props.currentContent === 'matches') {
-                window.location.href='/live-event-match';
-            } else {
-                window.location.href='/live-event-battle';
-            }
-            
+            window.open(
+                e.currentTarget.getAttribute('data-url'),
+                '_blank'
+            );        
         }
     }
     
@@ -33,7 +31,7 @@ export default function SingleCard(props) {
             {
                 currentArray.map(el => {
                     return (
-                        <div className={"single-card " + (el.live ? "live-event" : "")} key={uuid()} onClick={goToUrl}>
+                        <div className={"single-card " + (el.live ? "live-event" : "")} key={uuid()} data-url={el.url} onClick={goToUrl}>
                             <div className={"single-card__star " + (el.finished ? 'single-card__star--finished' : '')} >
                                 <img src={el.live ? logoStarFull : el.upcoming ? logoStar : logoStarFinished } alt="Logo Start"/>
                             </div>

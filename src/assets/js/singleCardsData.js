@@ -33,6 +33,7 @@ const matchesContent = [
             },
             
         ],
+        url: 'https://asia-minor-Match-WatchOnline.com',
         beforeStart: '',
         system: 'Bo 3',
         scores: '',
@@ -63,6 +64,7 @@ const matchesContent = [
             },
             
         ],
+        url: '',
         beforeStart: 'Starts in: 5 hours 39 min',
         system: 'Bo 3',
         scores: '',
@@ -93,6 +95,7 @@ const matchesContent = [
             },
             
         ],
+        url: '',
         beforeStart: 'Starts in: 5 hours 39 min',
         system: 'Bo 3',
         scores: '',
@@ -126,6 +129,7 @@ const matchesContent = [
             },
             
         ],
+        url: '',
         beforeStart: '',
         system: 'Bo 3',
         scores: '1:0 • 0:1 • 1:0',
@@ -151,6 +155,7 @@ const batlesContent = [
             },
             
         ],
+        url: 'https://group-stage-battle-watchOnline.com',
         matchId: 1,
         imgBattle: imgBattle1,
         beforeStart: '',
@@ -176,6 +181,7 @@ const batlesContent = [
             },
             
         ],
+        url: '',
         matchId: 2,
         imgBattle: imgBattle1,
         beforeStart: 'Starts in: 5 hours 39 min',
@@ -199,6 +205,7 @@ const batlesContent = [
             },
             
         ],
+        url: '',
         matchId: 3,
         imgBattle: imgBattle1,
         beforeStart: 'Starts in: 5 hours 39 min',
@@ -222,6 +229,7 @@ const batlesContent = [
             },
             
         ],
+        url: '',
         matchId: 4,
         imgBattle: imgBattle1,
         beforeStart: '',

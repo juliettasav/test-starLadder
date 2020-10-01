@@ -9,6 +9,13 @@ import backRegistred from '../assets/images/pic/background-register.svg';
 import Navigation from '../modules/Navigation'
 
 export default function StagesComponent() {
+    const goToTeamLink = (e) => {
+
+        window.open(
+            e.currentTarget.getAttribute('data-url'),
+            '_blank'
+        );
+    }
     return (
         <div className="stages-event">
             <div className="container">
@@ -24,7 +31,7 @@ export default function StagesComponent() {
                         <div className="stages-event__content__table__body">
                             {registredPlayers.map(player => {
                                 return (
-                                    <div className="stages-event__content__table__body__row" key={uuid()}>
+                                    <div className="stages-event__content__table__body__row" data-url={player.url} key={uuid()} onClick={goToTeamLink}>
                                         
                                             <div className="stages-event__content__table__body__item" data-column="#">{player.id}</div>
                                             <div className="stages-event__content__table__body__item" data-column="Команда">
